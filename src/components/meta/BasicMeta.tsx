@@ -9,10 +9,6 @@ type Props = {
   url: string;
 };
 
-type SiteKeyword = {
-  keyword: string;
-};
-
 export default function BasicMeta({
   title,
   description,
@@ -31,11 +27,7 @@ export default function BasicMeta({
       />
       <meta
         name="keywords"
-        content={
-          keywords
-            ? keywords.join(",")
-            : config.site_keywords.map((it: SiteKeyword) => it.keyword).join(",")
-        }
+        content={keywords ? keywords.join(",") : config.site_keywords.join(",")}
       />
       {author ? <meta name="author" content={author} /> : null}
       <link rel="canonical" href={config.base_url + url} />
