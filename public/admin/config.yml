@@ -101,6 +101,7 @@ collections:
       - label: "Slug"
         name: "slug"
         widget: "string"
+        default: "test"  # Add this line with the desired slug value
       - label: "Title"
         name: "title"
         widget: "string"
