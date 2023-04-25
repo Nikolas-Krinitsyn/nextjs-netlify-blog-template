@@ -10,4 +10,4 @@ type Config = {
   readonly github_account: string;
 };
 
-export default Config as Config;
+export default config as Config;
