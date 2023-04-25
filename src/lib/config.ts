@@ -1,6 +1,6 @@
 import config from "../../config.json";
 
-type Config = {
+type config = {
   readonly base_url: string;
   readonly site_title: string;
   readonly site_description: string;
