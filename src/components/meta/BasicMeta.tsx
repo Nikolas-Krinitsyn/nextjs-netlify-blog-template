@@ -8,6 +8,11 @@ type Props = {
   author?: string;
   url: string;
 };
+
+type SiteKeyword = {
+  keyword: string;
+};
+
 export default function BasicMeta({
   title,
   description,
@@ -29,7 +34,7 @@ export default function BasicMeta({
         content={
           keywords
             ? keywords.join(",")
-            : config.site_keywords.map((it) => it.keyword).join(",")
+            : config.site_keywords.map((it: SiteKeyword) => it.keyword).join(",")
         }
       />
       {author ? <meta name="author" content={author} /> : null}
